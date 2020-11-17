@@ -1,0 +1,206 @@
+{% extends "base_generic.html" %}
+{% block content %}
+    <!--Carrousel-->
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          {% load static %}
+          <img src="{% static 'img/slider-5.jpg' %}" class="d-block w-100" alt="PlayStation Consola">
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="ps5 display-3">PlayStation 5 Digital Edition</h5>
+            <p class="ps5 h4">Las funciones de DualSense, así como Tempest 3D AudioTech de la PS5, ofrecerán nuevas formas y sensaciones inmersivas para los jugadores.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          {% load static %}
+          <img src="{% static 'img/slider-2.jpg' %}" class="d-block w-100" alt="XBOX Series X Consola">
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="xbox display-3">XBox Series X</h5>
+            <p class="xbox h4">Descubre la consola Xbox más rápida y potente de la historia. 8 Poderosos Núcleos y un rendimiento gráfico jamás visto.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          {% load static %}
+          <img src="{% static 'img/slider-3.png' %}" class="d-block w-100" alt="Nintendo Switch Consola">
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="display-3">Nintendo Switch</h5>
+            <p class="h4">La consola híbrida que tanto estabas esperando, lleva la diversión a donde quiera que vayas.</p>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <!--Header-->
+    <header id="home">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="header-content-left">
+              {% load static %}
+              <img class="mt-5" src="{% static 'img/home-cod.jpg' %}" style="width: 100%;" alt="Imagen Noticia Principal">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="header-content-rigth">
+              <br><br>
+              <h1 id="new">Call of Duty: Black Ops Cold War Zombies<span class="badge badge-danger ml-3">New</span></h1>
+              <p class="mt-5 mb-5 h5">El modo zombies nos deja con un primer teaser que adelanta una historia y una atmósfera mucho más oscura y cercana al terror...</p>
+              <a href="{% url 'game-4' %}" class="btn btn-outline-danger btn-lg mt-2">Leer Más</a>
+              <br><br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!--Bloque 1-->
+    <section id="bloque-1">
+      <div class="container">
+        <div class="row mt-5">
+          <div class="col-md-4 my-auto">
+            <div class="info-left">
+              {% load static %}
+              <img src="{% static 'img/xboxseries2.png' %}" style="width: 100%;" alt="Xbox Series X">
+            </div>
+          </div>
+          <div class="col-md-5 my-auto">
+            <div class="info-rigth">
+              <h1 class="titulos display-4"> XBOX Series X: Extremadamente Poderosa.</h1>
+              <p class="h5 mt-4">Segunda Generación de los Zen de AMD, 4K con  framterate hasta los 120 FPS y mucho más...</p>
+              <a href="{% url 'consolas' %}" class="btn btn-outline-danger btn-lg mt-2">Quiero saber más...</a>
+              <br><br>
+            </div>
+          </div>
+          <div class="col-md-3 my-auto">
+            <div id="monster" class="pt-4 pb-4 pr-4 pl-4">
+              <h2>Unleash the Beast!</h2>
+              <a href="https://www.monsterenergy.com/cl/es/products/monster-energy" target="_blank">
+                {% load static %}
+                <img src="{% static 'img/pub-monster.jpg' %}" style="width: 100%;" alt="Monster Energy Drink">
+              </a>
+              <p class="mt-3">Sabemos que te va encantar...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Bloque 2-->
+    <section id="bloque-2">
+      <div class="container">
+        <div class="row mt-5">
+          <div class="col-md-4">
+            <div class="info-left">
+              {% load static %}
+              <img src="{% static 'img/cpk-2.png' %}" style="width: 100%;" alt="Noticia CyberPunk 2077">
+            </div>
+          </div>
+          <div class="col-md-5 my-auto">
+            <div class="info-rigth">
+              <h1 class="titulos display-4">Cyberpunk 2077 está aquí.</h1>
+              <p class="h5 mt-4">El president de CD Projekt habla de las versiones de Cyberpunk 2077 para PS5 y Xbox Series X, así como de sus expansiones y su modo multijugador.</p>
+              <a href="{% url 'game-1' %}" class="btn btn-outline-danger btn-lg mt-2">Quiero saber más...</a>
+            </div>
+          </div>
+          <div class="col-md-3 my-auto">
+            <div id="solotodo" class="pt-4 pb-4 pr-4 pl-4 my-auto">
+              <h2>Cotiza tu Hardware Aqui</h2>
+              <br><br>
+              <a href="https://www.solotodo.cl/" target="_blank">
+                {% load static %}
+                <img src="{% static 'img/pub-solotodo.png' %}" style="width: 100%;" alt="Cotizaciones SOLOTODO Chile">
+              </a>
+              <p class="mt-3">Diversidad de precios, un solo portal..</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Bloque 3-->
+    <section id="bloque-3">
+      <div class="container">
+        <div class="row mt-5">
+          <div class="col-md-4">
+            <div class="info-left">
+              {% load static %}
+              <img src="{% static 'img/ps57.png' %}" style="width: 100%;" alt="PlayStation 5">
+            </div>
+          </div>
+          <div class="col-md-5 my-auto">
+            <div class="info-rigth">
+              <h1 class="titulos display-4">PS5: Un cerebro muy potente.</h1>
+              <p class="h5 mt-4">Poderosos 8 núcleos Zen de Segunda Generación, Tempest 3D audio, Ray Traycing y mucho más....</p>
+              <a href="{% url 'consolas' %}" class="btn btn-outline-danger btn-lg mt-2">Quiero saber más...</a>
+            </div>
+          </div>
+          <div class="col-md-3 my-auto">
+            <div id="fornite" class="pt-4 pb-4 pr-4 pl-4">
+              <h2>Juega Ya!</h2>
+              <a href="https://www.epicgames.com/fortnite/es-MX/home" target="_blank">
+                {% load static %}
+                <img src="{% static 'img/pub-fornite.jpg' %}" style="width: 100%;" alt="4ta Temporada Fornite">
+              </a>
+              <p class="mt-3">Juega como tus Vengadores favoritos en esta nueva aventura!.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Secciones Inferiores-->
+    <section id="secciones">
+      <div class="container">
+        <div class="row my-5">
+          <div class="col-md-6">
+            <h2 class="mt-3"><a href="{% url 'videogames' %}">VideoJuegos</a></h2>
+            <p class="h5 mb-4">Mantente siempre al día con todas las noticias relacionadas con los juegos que correran en las nuevas consolas de proxima generación, ¿Te las vas a perder?.</p>
+          </div>
+          <div class="col-md-6">
+            <h2 class="mt-3"><a href="{% url 'consolas' %}">Consolas</a></h2>
+            <p class="h5 mb-4">¿Eres fan de las consolas como Play Station y Xbox?, pues no esperes mas
+              descubre todo acerca de la PS5 y la XBox Series X e incluso la Nintendo Switch,
+              mantente siempre al día en nuestra página.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    {% load static %}
+    <!--Configuración ScrollReval-->
+    <script>
+      const sr = ScrollReveal();
+
+      sr.reveal('.publicidad', {
+          duration: 3000,
+          origin: 'bottom'
+      });
+
+      sr.reveal('#home', {
+          duration: 3000,
+          origin: 'bottom'
+      });
+
+      sr.reveal('#bloque-1', {
+          duration: 3000,
+          origin: 'bottom'
+      });
+
+      sr.reveal('#bloque-2', {
+          duration: 3000,
+          origin: 'bottom'
+      });
+
+      sr.reveal('#bloque-3', {
+          duration: 3000,
+          origin: 'bottom'
+      });
+    </script>
+{% endblock %}

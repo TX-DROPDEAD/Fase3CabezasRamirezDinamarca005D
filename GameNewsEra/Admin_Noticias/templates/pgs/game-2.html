@@ -1,0 +1,172 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+    <!--Portada Principal-->
+    <section id="img-top" class="tlou container-fluid slider d-flex">
+      <h1 class="display-4 d-block w-100"></h1>
+      {% load static %}
+      <style>.tlou {background-image: url('{% static "/img/lu22-2.jpg" %}');}</style>
+    </section>
+    <!--Header-->
+    <header id="home">
+      <div class="container mt-4">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="header-content-rigth">
+              <h1 id="new" class="display-2">The Last Of Us Parte II ya esta aqui y viene con todo.</h1>
+              <p id="sub" class="mt-5 h3">Preparate para disfrutar una aventura junto a Joel y Ellie</p>
+              <br><br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!--Noticia Bloque 1-->
+    <section id="bloque-1">
+      <div class="container">
+        <div class="row mt-4">
+          <div class="col-md-9">
+            <div class="info-rigth">
+              <p class="h5">El disco de <strong>The Last Of Us Parte II</strong> de <b>PS4</b> podra reproducirse sin ningun 
+                problema en la nueva consola, pero aun no se sabe si habra una remasterizacion
+                para el juego en la <b>PS5</b>, sin embargo, si Sony esta planeando que este juego sea
+                lo mas destacado de la nueva consola, hay posibilidad de una remasterizacion.
+                <br><br>
+                Parece que el juego será parte de lo que Sony llama la categoría de “compatibilidad hacia adelante”, 
+                lo cual es una buena noticia, ya que los fanáticos no tendrán que comprar el juego por segunda 
+                vez cuando se lance PlayStation 5. Tampoco tendrán que recurrir a esperar en PlayStation 5 para 
+                experimentarlo.</p>
+              <br><br>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div id="adidas" class="pt-4 pb-4 pr-4 pl-4">
+              <h2>Adidas</h2>
+              <a href="https://www.adidas.cl/ropa-athletics" style="text-decoration: none;" target="_blank">
+                {% load static %}
+                <img src="{% static '/img/pub-adidas.jpg' %}" style="width: 100%; " alt="Publicidad Adidas">
+              </a>
+              <p style="margin-top: 10%;">Encuentra tu outfit en tienda Adidas, no te pierdas los increibles descuentos.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Video-->
+    <section id="video">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-12 align-self-center text-center">
+                  <br><br>
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/TXl9GI1p_Os" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <br><br>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Seccion Imagen Central-->
+    <section id="img-central">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 mt-4">
+                  {% load static %}
+                    <img src="{% static '/img/lu22-3.jpg' %}" style="width: 100%;" alt="The Last Of Us Part 2">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Reseña-->
+    <section id="reseña">
+      <div class="container">
+        <br><br>
+        <p class="mb-2 h2">
+          El presidente de  Sony Interactive Entertainment aseguró que <b>The Last Of Us II</b> 
+          correrá en PlayStation 5. 
+          El título de Naughty Dog, que salio el 19 de junio de este año, es compatible con la nueva consola.
+        </p>
+        <p class="h4"> -Sony Interactive Entertainment</p>
+        <br><br>
+      </div>
+    </section>
+    <!--Noticia Bloque 2-->
+    <section id="bloque-2">
+      <div class="container">
+        <div class="row mt-4">
+          <div class="col-md-9">
+            <div class="info-rigth">
+              <p class="h5"><strong >The Last Of Us Parte II</strong> es uno de esos juegos que hacen avanzar 
+                al medio, elevando los estándares de calidad de lo que deberíamos esperar de un triple A, 
+                especialmente en el plano narrativo, realmente impactante, que engarza de manera perfecta con 
+                una propuesta jugable excelente y un apartado audiovisual de excepción. Con pocos estudios 
+                dentro de la industria que puedan llegar a ofrecer semejante nivel de excelencia en 
+                todos los aspectos, Naughty Dog vuelve a superarse con una aventura memorable, que 
+                cualquier jugador debería probar, y que consigue lo que esperábamos: que nunca vayamos 
+                a olvidar a Joel y Ellie, que se convierten en dos personajes ya eternos en la historia
+                 de los videojuegos</p>
+              <br><br>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div id="amongo" class="pt-4 pb-4 pr-4 pl-4 ">
+              <h2>Amoung Us</h2>
+              <a href="https://play.google.com/store/apps/details?id=com.innersloth.spacemafia&hl=es_CL" style="text-decoration: none;" target="_blank">
+                {% load static %}
+                <img src="{% static '/img/pub-amoung.jpg' %}" style="width: 100%;" alt="Publicidad Among Us">
+              </a>
+              <p style="margin-top: 10%;">Lo ultimo en tendencia, ven y diviertete con tus amigos</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Secciones Inferiores-->
+    <section id="secciones">
+      <div class="container">
+        <div class="row my-5">
+          <div class="col-md-6">
+            <h2 class="mt-3"><a href="{% url 'videogames' %}">VideoJuegos</a></h2>
+            <p class="h5 mb-4">Mantente siempre al día con todas las noticias relacionadas con los juegos que correran en las nuevas consolas de proxima generación, ¿Te las vas a perder?.</p>
+          </div>
+          <div class="col-md-6">
+            <h2 class="mt-3"><a href="{% url 'consolas' %}">Consolas</a></h2>
+            <p class="h5 mb-4">¿Eres fan de las consolas como Play Station y Xbox?, pues no esperes mas
+              descubre todo acerca de la PS5 y la XBox Series X e incluso la Nintendo Switch,
+              mantente siempre al día en nuestra página.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Configuración ScrollReveal-->
+    <script>
+      const sr = ScrollReveal();
+
+      sr.reveal('#img-top', {
+          duration: 3000,
+          origin: 'bottom'
+      });
+
+      sr.reveal('#sub', {
+          duration: 3000,
+          origin: 'bottom'
+      });
+
+      sr.reveal('#video', {
+          duration: 3000,
+          origin: 'bottom'
+      });
+
+      sr.reveal('#img-central', {
+          duration: 3000,
+          origin: 'bottom'
+      });
+
+      sr.reveal('#reseña', {
+          duration: 3000,
+          origin: 'bottom'
+      });
+    </script>
+{% endblock %}

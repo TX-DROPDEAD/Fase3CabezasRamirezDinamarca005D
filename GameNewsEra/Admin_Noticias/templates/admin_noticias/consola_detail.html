@@ -1,0 +1,39 @@
+{% extends "base_generic.html" %}
+{% block content %}
+{% if user.is_authenticated  %}{% if user.is_staff %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h1 class="display-3" style="margin-top: 18%;">Detalles de Consola</h1>
+            <form action="" method="POST">
+                {% csrf_token %}
+                <div class="card-body">
+                    <div class="form-group">
+                        <label class="h2" style="margin-top: 8%;" for="formGroupExampleInput">Consola: </label><p class="h2">{{consola.nombre}}</p>
+                        <label class="h2" style="margin-top: 5%;" for="formGroupExampleInput">Generacion: </label><p class="h2" style="margin-bottom: 14%">{{consola.generacion}}</p>
+                    </div>
+                </div>
+            </form>      
+        </div>
+    </div>
+</div>
+{% endif %}
+{% else %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <form action="" method="POST">
+                {% csrf_token %}
+                <div class="card-body">
+                    <div class="form-group">
+                        <label class="display-4" style="margin-top: 18%; margin-bottom: 10%;" for="formGroupExampleInput">¡¡¡ERROR; DEBE SER UN USUARIO STAFF!!!</label>
+                        <p class="h1"><em>401</em></p>
+                        <p class="h3" style="margin-bottom: 10%;"><em>Unauthorized :(</em></p>
+                    </div>
+                </div>
+            </form>      
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endblock %}

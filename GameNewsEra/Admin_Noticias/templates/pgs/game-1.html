@@ -1,0 +1,190 @@
+{% extends "base_generic.html" %}
+{% block content %}
+  <!--Portada Principal-->
+    <section id="img-top" class="cbk container-fluid slider d-flex">
+      <h1 class="display-4 d-block w-100"></h1>
+      {% load static %}
+      <style>.cbk {background-image: url('{% static "img/cpk-3.jpg" %}');}</style>
+    </section>
+    <!--Header-->
+    <header id="home">
+      <div class="container mt-4">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="header-content-rigth">
+              <h1 id="new" class="display-2">Cyberpunk 2077 con Ray Tracing... <br> Simplemente Hermoso.</h1>
+              <p id="sub" class="mt-5 h3">El año pasado, anunciamos la incorporación de Ray Tracing a Cyberpunk 2077 y compartimos algunas increíbles imágenes del juego con la tecnología activada.<br><br>Ahora, habrá cuatro efectos de ray tracing en el juego, para ofrecer aún más la calidad de imagen, el realismo y la inmersión.</p>
+              <br><br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!--Noticia Bloque 1-->
+    <section id="bloque-1">
+      <div class="container">
+        <div class="row mt-4">
+          <div class="col-md-9">
+            <div class="info-rigth">
+              <p class="h5"><strong>Iluminación difusa con Ray Tracing:</strong> captura la radiación del cielo y la iluminación emisora de varias superficies, lo cual es difícil de lograr con las técnicas de renderizado tradicionales. Cuando esté habilitada, las marquesinas y otras superficies y objetos iluminados brillarán en su entorno con iluminación de colores naturales, y el sol y la luna iluminarán de manera realista la Night City.</p>
+              <br>
+              <p class="h5"><strong>Reflejos con ray tracing:</strong> en Cyberpunk 2077, los reflejos con ray tracing se usan en todas las superficies y pueden rastrear rangos de hasta varios kilómetros, lo que permite reflejos realistas en diferentes distancias de visión. Están presentes en objetos y superficies opacas y transparentes para simular la forma en que la luz se refleja desde las superficies brillantes y metálicas al trazar un solo rebote de rayos de reflexión en la escena.</p>
+              <br>
+              <p class="h5"><strong>Oclusión ambiental con ray tracing:</strong> La oclusión ambiental es una técnica de sombreado y renderizado que se utiliza para calcular la exposición de cada punto de una escena a la iluminación ambiental, lo que genera en la renderización de nuevas sombras de oclusión ambiental lo que les da una base a los objetos y oscurece naturalmente superficies, objetos y otros elementos del juego. En Cyberpunk 2077, la oclusión ambiental con ray tracing se puede usar con luces locales para aproximar los efectos locales de sombreado donde faltan sombras, lo que mejora en gran medida la calidad del efecto de oclusión ambiental.</p>
+              <br>
+              <p class="h5"><strong>Sombras con ray tracing:</strong> el ray tracing permite a los desarrolladores crear sombras perfectas para píxeles en los juegos, sin los compromisos ni las limitaciones de los mapas de sombras. En Cyberpunk 2077, se agregan al juego sombras direccionales del sol y la luz de la luna, en función de la fuerza de la luz, la dispersión de luz a través de las nubes y otros factores.</p>
+              <br>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div id="twitch" class="pt-4 pb-4 pr-4 pl-4">
+              <h2 class="h3 mb-4">¿Te Gusta el Terror? 7u7</h2>
+              <a href="https://www.twitch.tv/tx_dropdead" target="_blank">
+                {% load static %}
+                <img src="{% static '/img/pub-twitch-2.jpg' %}" style="width: 100%;" alt="Publicidad Twitch 1">
+                {% load static %}
+                <img src="{% static '/img/pub-twitch-1.png' %}" style="width: 100%;" alt="Publicidad Twitch 2">
+                <br><br>
+              </a>
+              <p>Descubre por qué la imaginación del Ser Humano no tiene límites.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Carrousel de Imagenes Central-->
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          {% load static %}
+          <img src="{% static '/img/cpk-5.jpg' %}" class="d-block w-100" alt="Cyberpunk 2077 Ray Tracing Demo 1">
+        </div>
+        <div class="carousel-item">
+          {% load static %}
+          <img src="{% static '/img/cpk-4.png' %}" class="d-block w-100" alt="Cyberpunk 2077 Ray Tracing Demo 2">
+        </div>
+        <div class="carousel-item">
+          {% load static %}
+          <img src="{% static '/img/cpk-6.jpg' %}" class="d-block w-100" alt="Cyberpunk 2077 Ray Tracing Demo 3">
+        </div>
+        <div class="carousel-item">
+          {% load static %}
+          <img src="{% static '/img/cpk-7.jpg' %}" class="d-block w-100" alt="Cyberpunk 2077 Ray Tracing Demo 4">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <!--Reseña-->
+    <section id="reseña">
+      <div class="container">
+        <br><br>
+        <p class="mb-2 h2">Cada uno de estos efectos es posible gracias a la API de DXR Raytracing de DirectX 12 Ultimate. Además, están optimizadoss para las GPU GeForce RTX y sus núcleos de Ray Tracing dedicados.</p>
+        <br>
+        <p class="h4"> -NVIDIA Corporation</p>
+      </div>
+    </section>
+    <!--Video-->
+    <section id="video">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-12 align-self-center text-center">
+            <br><br>
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Efo-YDWnnpw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <br><br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Noticia Bloque 2-->
+    <section id="bloque-2">
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-md-9">
+            <div class="info-rigth">
+              <p class="h5">
+                El juego será retrocompatible de lanzamiento, así que se podrá jugar en PS5 y Xbox Series X el día que las consolas estén a la venta. Además, según ha indicado la compañía a los inversores, en cuanto estén disponibles habrá un parche para que los jugadores de PS5 y XSX reciban mejoras gráficas.
+                <br><br>
+                Sin embargo, no será la última actualización que el juego reciba. Más adelante se lanzarán versiones del juego pensadas para estas dos nuevas consolas con mejoras más profundas.
+                <br><br>
+                En ambos casos se tratarán de actualizaciones gratuitas; en el caso de Xbox Series X el estudio ya había confirmado que sería compatible con Smart Delivery, pero desde la compañía han polaca han confirmado que también habrá mejora gratuita de versión de PS4 a PS5.
+                <br><br>
+                Cyberpunk 2077 saldrá el 19 de noviembre en PC, PS4 y Xbox One. Las versiones para nueva generación se lanzarán en más adelante.
+                <br><br>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div id="discord" class="pt-4 pb-4 pr-4 pl-4">
+              <h2 class="h3 mb-4">Únete al Discord!</h2>
+              <a href="https://discord.gg/QaM9vqW" target="_blank">
+                {% load static %}
+                <img src="{% static '/img/pub-discord.webp' %}" class="mb-3" style="width: 100%;" alt="Publididad Discord 1">
+              </a>
+              <p>Videojuegos, Informatica y Pibardos pa Jugar uwu.</p>
+              <a href="https://discord.gg/QaM9vqW" target="_blank">
+                {% load static %}
+                <img src="{% static '/img/pub-hackerman.jpg' %}" class="mb-3" style="width: 100%;" alt="Publicidad Discord 2">
+              </a>
+              <p>We are H  A  K  E  R  M  A  N  'S</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Secciones Inferiores-->
+    <section id="secciones">
+      <div class="container">
+        <div class="row my-5">
+          <div class="col-md-6">
+            <h2 class="mt-3"><a href="{% url 'videogames' %}">VideoJuegos</a></h2>
+            <p class="h5 mb-4">Mantente siempre al día con todas las noticias relacionadas con los juegos que correran en las nuevas consolas de proxima generación, ¿Te las vas a perder?.</p>
+          </div>
+          <div class="col-md-6">
+            <h2 class="mt-3"><a href="{% url 'consolas' %}">Consolas</a></h2>
+            <p class="h5 mb-4">¿Eres fan de las consolas como Play Station y Xbox?, pues no esperes mas
+              descubre todo acerca de la PS5 y la XBox Series X e incluso la Nintendo Switch,
+              mantente siempre al día en nuestra página.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    {% load static %}
+    <!--Configuración ScrollReveal-->
+    <script>
+      const sr = ScrollReveal();
+
+      sr.reveal('#img-top', {
+          duration: 1000,
+          origin: 'bottom'
+      });
+
+      sr.reveal('#sub', {
+          duration: 1500,
+          origin: 'bottom'
+      });
+
+      sr.reveal('#video', {
+          duration: 2000,
+          origin: 'bottom'
+      });
+
+      sr.reveal('#img-central', {
+          duration: 1000,
+          origin: 'bottom'
+      });
+
+      sr.reveal('#reseña', {
+          duration: 1500,
+          origin: 'bottom'
+      });
+    </script>
+{% endblock %}

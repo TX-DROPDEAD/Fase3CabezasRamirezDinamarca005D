@@ -1,0 +1,156 @@
+{% extends "base_generic.html" %}
+  {% block content %}
+    <!--Portada Principal-->
+    <section class="contacto container-fluid slider d-flex">
+      {% load static %}
+      <style>.contacto {background-image: url('{% static "img/contacto.jpg" %}');}</style>
+      <h1 class="display-4 d-block w-100"></h1>
+      <style></style>
+    </section>
+    <!--Header-->
+    <header id="home">
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="header-content-rigth">
+              <br><br>
+              <h1 id="new" class="display-2">¿Quieres ser Parte de Nuestro Equipo?</h1>
+              <p class="mt-5 h3">¡Ven y se parte de nuestro equipo, podrás aprender cosas nuevas, ganar toneladas de XP, logros desbloqueables y mucho, mucho conocimiento!.</p>
+              <br><br>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md-12">
+            <h2 id="new" class="display-4" style="margin-bottom: 5%;">Actualmente Contamos con: </h2>
+          </div>
+        </div>
+      </div>
+      <div class="container mt-5">
+        <div class="row justify-content-center">
+          <div class="col-md-6 mb-5">
+            <div>
+              <ul>
+                <li class="h4"><strong>Autores:</strong> {{ nro_autores }}</li>
+                <li class="h4"><strong>Noticias:</strong> {{ nro_noticias }}</li>
+                <li class="h4"><strong>Consolas:</strong> {{ nro_consolas }}</li>
+              </ul>
+              <hr>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!--Formulario-->
+    <section id="bloque-1">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-3">
+            <div>
+              {% load static %}
+              <img src="{% static 'img/form.jpg' %}" style="width: 100%;" alt="Press Start">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card-body">
+              <div class="form-group">
+                <form id="formulario" method="POST" class="post-form" enctype="multipart/form-data" onsubmit="return validacion()">
+                  {% csrf_token %}
+                  <div class="mt-3 h5">
+                    <h2 class="h5">{{ form.as_p }}</h2>
+                  </div>
+                  <button type="submit" style="margin-top: 8%; margin-bottom: 12%;" class="btn btn-outline-danger btn-block">Guardar</button>
+                  <br>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div id="bootstrap" class="pt-4 pb-4 pr-4 pl-4">
+              <h2>Implementa Bootstrap 4</h2>
+              <a href="https://getbootstrap.com/" style="text-decoration: none;" target="_blank">
+                {% load static %}
+                <img src="{% static 'img/pub-bootstrap.png' %}" style="width: 100%;"alt="Publicidad Bootstrap">
+              </a>
+              <p class="mt-3">Personaliza tu página web de forma facil y sencilla!!!.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Secciones Inferiores-->
+    <section id="secciones">
+      <div class="container">
+        <div class="row my-5">
+          <div class="col-md-6">
+            <h2 class="mt-3"><a href="{% url 'videogames' %}">Videojuegos</a></h2>
+            <p class="h5 mb-4">Mantente siempre al día con todas las noticias relacionadas con los juegos que correran en las nuevas consolas de proxima generación, ¿Te las vas a perder?.</p>
+          </div>
+          <div class="col-md-6">
+            <h2 class="mt-3"><a href="{% url 'consolas' %}">Consolas</a></h2>
+            <p class="h5 mb-4">¿Eres fan de las consolas como Play Station y Xbox?, pues no esperes mas
+              descubre todo acerca de la PS5 y la XBox Series X e incluso la Nintendo Switch,
+              mantente siempre al día en nuestra página.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+   <!--JQuery Validation Scritps-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+    <!--Configuración ScrollReveal-->
+    <script>
+      const sr = ScrollReveal();
+
+      sr.reveal('#bloque-1', {
+          duration: 2000,
+          origin: 'bottom'
+      });
+    </script>
+    <!--Configuración JQuery Validation-->
+    <script>
+      $(function() 
+      {
+        $("#formulario").validate({
+            rules: {
+                    nombre: "required",
+                    apellido: "required",
+                    numero: {
+                      required: true,
+                      digits: true
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    }, 
+                    texto: {
+                        required: true
+                    }   
+                },
+            messages: {
+                email: {
+                    required: 'Ingresa tu correo electrónico',
+                    email: 'Formato de correo no válido'
+                },
+                nombres: {
+                    required: 'Ingresa su(s) nombre(s)',
+                    minlength: 'Caracteres insuficientes mínimo 3'
+                },
+                apellidos:{
+                    required: 'Ingrese su(s) apellido(s)',
+                    minlength: 'Caractéres insuficientes mínimo 3'
+                },
+                telefono:{
+                    required: 'Ingrese un teléfono válido',
+                    digits: 'porfavor digite solo números',
+                    minlength: 'porfavor ingrese 9 digitos'
+                },
+                texto: {
+                    required: 'Ingrese texto, al menos 20 caracteres.'                }
+                }
+        });
+    }); 
+    </script>
+{% endblock %}

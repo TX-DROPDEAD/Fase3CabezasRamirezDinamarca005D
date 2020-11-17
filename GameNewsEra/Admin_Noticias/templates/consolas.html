@@ -1,0 +1,480 @@
+{% extends "base_generic.html" %}
+{% block content %}
+    <!--Portada Principal-->
+    <section class="consoles container-fluid slider d-flex">
+      {% load static %}
+      <style>.consoles {background-image: url('{% static "img/hardware-home.webp" %}');}</style>
+      <h1 class="display-4 d-block w-100"></h1>
+    </section>
+    <!--Header-->
+    <header id="home">
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="header-content-rigth">
+              <br><br>
+              <h1 id="new" class="mb-5 display-2 text-center">H  A  R  D  W  A  R  E</h1>
+              <p class="mt-5 mb-5 h3 text-center">Aqui conocerás con detalle los componentes que formarán parte de la Nueva Generación de Consolas</p>
+              <br><br><br><br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!--Titulo PlayStation-->
+    <section id="img-home">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 mb-5">
+            <div>
+              {% load static %}
+              <img class="img-centrar" src="{% static 'img/play-logo.png' %}"  alt="PlayStation Classic Logo">
+              <br><br><br><br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--PlayStation 5-->
+    <section id="bloque-1">
+      <div class="container">
+        <div class="row mt-5">
+          <div class="col-xl-5">
+            <div class="info-left">
+              {% load static %}
+              <img id="img-top" src="{% static 'img/ps5.png' %}" style="width: 100%;" alt="Sony PlayStation 5 Black Edition">
+              <br><br>
+            </div>
+          </div>
+          <div class="col-xl-7">
+            <div class="info-rigth">
+              <h2 class="display-3">PlayStation 5 / Digital Edition.</h2>
+              {% load static %}
+              <img src="{% static 'img/logo-ps5.png' %}"  style="width: 50%;" alt="Logo PlayStation 5">
+              <br><br>
+              <table id="info-top" class="table table-borderless">
+                <tbody>
+                  <tr>
+                    <th scope="row">CPU</th>
+                    <td>x86-64-AMD Ryzen Zen 2 Personalizado.</td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td>3.5GHz Frecuencia Variable.</td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td>8 Núcleos / 16 Hilos.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">GPU</th>
+                    <td>AMD Radeon RDNA 2 Ray Tracing Ready Personalizada.</td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td>2.3GHz Frecuencia Variable.</td>
+                  </tr> 
+                  <tr>
+                    <th></th>
+                    <td>36 CUs / 10.28TFLOPs</td>
+                  </tr>             
+                </tbody>
+              </table>
+              <br><br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Tabla Inferior-->
+    <section>
+      <div id="info-bottom" class="container mb-5">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="info-left">
+              <table class="table table-borderless">
+                <tbody>
+                  <tr>
+                    <th scope="row">Memoria</th>
+                    <td>16GB GDDR6 / 256-bits.</td>
+                  </tr>
+                  <tr>
+                    <th>Ancho de Banda de la Memoria</th>
+                    <td>448GB/s</td>
+                  </tr>
+                  <tr>
+                    <th>Lector</th>
+                    <td>4K UHD Blu-ray.</td>
+                  </tr>         
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="info-rigth">
+              <table class="table table-borderless">
+                <tbody>
+                  <tr>
+                    <th scope="row">Almacenamiento</th>
+                    <td>825GB SSD.</td>
+                  </tr>
+                  <tr>
+                    <th>I/O</th>
+                    <td>5.5GB/s.</td>
+                  </tr>
+                  <tr>
+                    <th>Audio</th>
+                    <td>Tempest 3D AudioTech.</td>
+                  </tr>           
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Imagen y Video Playstation 5-->
+    <section>
+      <div class="container">
+        <div class="row">
+          <div id="img-left" class="col-md-6">
+            <div class="info-left">
+              {% load static %}
+              <img src="{% static 'img/ps510.jpg' %}" style="width: 100%;" alt="Control PlayStation 5">
+              <br><br>
+            </div>
+          </div>
+          <div id="img-right" class="col-md-6">
+            <div class="info-rigth mb-5">
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/LnWLOMNEksM" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Titulo XBOX-->
+    <section id="img-home">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 mt-5 mb-5">
+            <div>
+              {% load static %}
+              <img class="img-centrar-2" src="{% static 'img/xbox-logo.jpg' %}"  alt="Xbox One logo">
+              <br><br><br><br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--XBOX Series X-->
+    <section id="bloque-1">
+      <div class="container">
+        <div class="row mt-5">
+          <div class="col-xl-5">
+            <div class="info-left">
+              {% load static %}
+              <img id="img-top" src="{% static 'img/xboxseries1.png' %}" style="width: 100%;" alt="Xbox Series X">
+              <br><br>
+            </div>
+          </div>
+          <div class="col-xl-7">
+            <div class="info-rigth">
+              <h2 class="display-3">XBOX Series X.</h2>
+              {% load static %}
+              <img src="{% static 'img/logo-xboxx.png' %}"  style="width: 50%;" alt="Logo Xbox Series X">
+              <br><br>
+              <table  id="info-top" class="table table-borderless">
+                <tbody>
+                  <tr>
+                    <th scope="row">CPU</th>
+                    <td>x86-64-AMD Ryzen Zen 2 Personalizado.</td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td>3.8GHz Frecuencia Variable.</td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td>8 Núcleos / 16 Hilos.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">GPU</th>
+                    <td>AMD Radeon RDNA 2 Ray Tracing Ready Personalizada.</td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td>1.825GHz Frecuencia Variable.</td>
+                  </tr> 
+                  <tr>
+                    <th></th>
+                    <td>52 CUs / 12TFLOPs</td>
+                  </tr>             
+                </tbody>
+              </table>
+              <br><br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Tabla Inferior-->
+    <section>
+      <div id="info-bottom" class="container mb-5">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="info-left">
+              <table class="table table-borderless">
+                <tbody>
+                  <tr>
+                    <th scope="row">Memoria</th>
+                    <td>16GB GDDR6 / 320mb bus.</td>
+                  </tr>
+                  <tr>
+                    <th>Ancho de Banda de la Memoria</th>
+                    <td>560GB/s</td>
+                  </tr>
+                  <tr>
+                    <th>Lector</th>
+                    <td>4K UHD Blu-ray.</td>
+                  </tr>         
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="info-rigth">
+              <table class="table table-borderless">
+                <tbody>
+                  <tr>
+                    <th scope="row">Almacenamiento</th>
+                    <td>1TB SSD.</td>
+                  </tr>
+                  <tr>
+                    <th>I/O</th>
+                    <td>4.8GB/s.</td>
+                  </tr>
+                  <tr>
+                    <th>Audio</th>
+                    <td>Dolby Atmos.</td>
+                  </tr>           
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Imagen y Video XBOX Series X-->
+    <section>
+      <div class="container mb-5">
+        <div class="row">
+          <div id="img-left" class="col-md-6">
+            <div class="info-left">
+              {% load static %}
+              <img src="{% static 'img/xboxseries3.jpg' %}" style="width: 100%;" alt="Control Xbox Series X">
+            </div>
+          </div>
+          <div id="img-right" class="col-md-6">
+            <div class="info-rigth mb-5">
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/no-LDy9rlFY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Titulo Nintendo-->
+    <section id="img-home">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 mt-5 mb-5">
+            <div>
+              {% load static %}
+              <img class="img-centrar-2" src="{% static 'img/nintendo-logo.png' %}"  alt="Nintendo Classic Logo">
+              <br><br><br><br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Nintendo Switch-->
+    <section id="bloque-1">
+      <div class="container">
+        <div class="row mt-5">
+          <div class="col-xl-5">
+            <div class="info-left">
+              {% load static %}
+              <img id="img-top" src="{% static 'img/switch.jpg' %}" style="width: 100%;" alt="Nintendo Switch">
+              <br><br>
+            </div>
+          </div>
+          <div class="col-xl-7">
+            <div class="info-rigth">
+              <h2 class="display-3">Nintendo Switch.</h2>
+              {% load static %}
+              <img src="{% static 'img/logo-switch.png' %}"  style="width: 50%;" alt="Logo Nintendo Switch">
+              <br><br>
+              <table id="info-top" class="table table-borderless">
+                <tbody>
+                  <tr>
+                    <th scope="row">CPU</th>
+                    <td>ARM x64-NVIDIA Tegra Switch Personalizada.</td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td>4x Cortex-A57 a 2.0 GHz.</td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td>4x Cortex-A53 a 1.3 GHz.</td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td>8 Núcleos / 8 Hilos.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">GPU</th>
+                    <td>NVIDIA Tegra X1 Maxwell Personalizada.</td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td>307.2MHz Mobile / 768MHz Static.</td>
+                  </tr> 
+                  <tr>
+                    <th></th>
+                    <td>256 CUDA Cores  / 1.024TFLOPs</td>
+                  </tr>             
+                </tbody>
+              </table>
+              <br><br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Tabla Inferior-->
+    <section>
+      <div id="info-bottom" class="container mb-5">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="info-left">
+              <table class="table table-borderless">
+                <tbody>
+                  <tr>
+                    <th scope="row">Memoria</th>
+                    <td>4GB LPDDR4 / 256-bits.</td>
+                  </tr>
+                  <tr>
+                    <th>Ancho de Banda de la Memoria</th>
+                    <td>25,6GB/s</td>
+                  </tr>
+                  <tr>
+                    <th>Lector</th>
+                    <td>microSD hasta 2TB. Salida 4K</td>
+                  </tr>         
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="info-rigth">
+              <table class="table table-borderless">
+                <tbody>
+                  <tr>
+                    <th scope="row">Almacenamiento</th>
+                    <td>32GB SSD.</td>
+                  </tr>
+                  <tr>
+                    <th>I/O</th>
+                    <td>2.5GB/s.</td>
+                  </tr>
+                  <tr>
+                    <th>Audio</th>
+                    <td>Nintendo Switch Stereo Audio System.</td>
+                  </tr>           
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Imagen y Video Switch-->
+    <section>
+      <div class="container">
+        <div class="row">
+          <div id="img-left" class="col-md-6">
+            <div class="info-left">
+              {% load static %}
+              <img src="{% static 'img/switch-3.jpg' %}" style="width: 100%;" alt="Control Nintendo Switch">
+            </div>
+          </div>
+          <div id="img-right" class="col-md-6">
+            <div class="info-rigth mb-5">
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/gUEhQ65FOJ8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Secciones Inferiores-->
+    <section id="secciones">
+      <div class="container">
+        <div class="row my-5">
+          <div class="col-md-6">
+            <h2 class="mt-3"><a href="{% url 'contacto_create' %}">Se Parte del Equipo</a></h2>
+            <p class="h5 mb-4">¡Ven y se parte de nuestro equipo, podrás aprender cosas nuevas, ganar toneladas de XP, logros desbloqueables y mucho, mucho conocimiento!.</p>
+          </div>
+          <div class="col-md-6">
+            <h2 class="mt-3"><a href="{% url 'videogames' %}">Videojuegos</a></h2>
+            <p class="h5 mb-4">Mantente siempre al día con todas las noticias relacionadas con los juegos que correran en las nuevas consolas de proxima generación, ¿Te las vas a perder?.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    {% load static %}
+    <!--Configuración ScrollReveal-->
+    <script>
+      const sr = ScrollReveal();
+
+      sr.reveal('#img-home', {
+        duration: 4000,
+        origin: 'bottom'
+      });
+
+      sr.reveal('#img-top', {
+        duration: 2000,
+        origen: 'bottom',
+        distance: '300px'
+      })
+
+      sr.reveal('#info-top', {
+        duration: 2000,
+        origin: 'bottom',
+        delay: 500
+      });
+
+      sr.reveal('#info-bottom', {
+        duration: 2000,
+        origin: 'bottom',
+        delay: 500
+      });
+
+      sr.reveal('#img-left', {
+        duration: 2000,
+        origin: 'left',
+        delay: 500
+      });
+      
+      sr.reveal('#img-right', {
+        duration: 2000,
+        origin: 'right',
+        delay: 500
+      });
+    </script>
+{% endblock %}

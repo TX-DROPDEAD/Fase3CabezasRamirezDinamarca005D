@@ -1,0 +1,190 @@
+{% extends "base_generic.html" %}
+{% block content %}
+ <!--Portada Principal-->
+ <section class="games container-fluid slider d-flex">
+    <h1 class="display-4 d-block w-100"></h1>
+    {% load static %}
+    <style>.games {background-image: url('{% static "img/games.jpg" %}');}</style>
+</section>
+<!--Header-->
+<header id="home">
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="header-content-rigth">
+            <br><br>
+            <h1 id="new" class="display-2 text-center">G A M E S<br>N E W S S S</h1>
+            <p class="mt-5 h3">Aqui encontrarás noticias relacionadas a los Juegos que veremos en la proxima generación de Consolas...</p>
+            <br><br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!--Noticia 1-->
+  <section id="bloque-1">
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col-md-4">
+          <div class="info-left">
+            {% load static %}
+            <img src="{% static 'img/cpk-1.jpg' %}" style="width: 100%;" alt="Noticia CyberPunk 2077">
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="info-rigth">
+            <h1 class="titulos display-4">Cyberpunk 2077 está más cerca que nunca.</h1>
+            <p>Ahora, habrá cuatro efectos de ray tracing en el juego, para ofrecer aún más la calidad de imagen, el realismo y la inmersión.</p>
+            <a href="{% url 'game-1' %}" class="btn btn-outline-danger btn-lg mt-2">Quiero saber más...</a>
+            <br><br>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div id="twitch" class="pt-4 pb-4 pr-4 pl-4">
+            <h2 class="h3 mb-4">¿Te Gusta el Terror? 7u7</h2>
+            <a href="https://www.twitch.tv/tx_dropdead" target="_blank">
+                {% load static %}
+              <img src="{% static 'img/pub-twitch-1.png' %}" style="width: 100%;" alt="Publicidad Twitch">
+              <br><br>
+            </a>
+            <p>Descubre por qué la imaginación del Ser Humano no tiene límites.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Noticia 2-->
+  <section id="bloque-2">
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col-md-4">
+          <div class="info-left">
+            {% load static %}
+            <img src="{% static 'img/lu22-1.jpg' %}" style="width: 100%;" alt="Noticia The Last Of Us 2">
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="info-rigth">
+            <h1 class="titulos display-4">The Last Of Us Parte II ya esta aqui y viene con todo.</h1>
+            <p><strong>The Last Of Us parte II</strong> el videojuego que cautivo a toda la 
+              comunidad gamer, estara disponible para la <b>Playstation 5</b>. Muchos fanaticos de este juego
+              se preguntaban si estaria disponible para la <b>PS5</b>, ya que, estos se estrenarian 
+              el mismo año. </p>
+            <a href="{% url 'game-2' %}" class="btn btn-outline-danger btn-lg mt-2">Quiero saber más...</a>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div id="galaxy" class="pt-4 pb-4 pr-4 pl-4">
+            <h2>Galaxy A</h2>
+            <a href="https://www.samsung.com/cl/smartphones/galaxy-a/?cid=cl_paid_ppc_google-search_corporate_always-on_aon-search_local-content_celulares-a-brand-site-traffic_mass-other&dclid=&gclid=EAIaIQobChMIopTJ49bi6wIVBYGRCh02eAhYEAAYASAAEgJ8nvD_BwE" style="text-decoration: none;" target="_blank">
+                {% load static %}
+                <img src="{% static 'img/pub-increible.jpg' %}" style="width: 100%; " alt="Publicidad Samsung">
+            </a>
+            <p style="margin-top: 10%;">Camara increible, pantalla increible y una bateria que dura mucho mas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Noticia 3-->
+  <section id="bloque-3">
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col-md-4">
+          <div class="info-left">
+            {% load static %}
+            <img src="{% static 'img/f6.jpg' %}" style="width: 100%;" alt="Noticia FarCry 6">
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="info-rigth">
+            <h1 class="titulos display-4">FARCRY 6 promete una increíble Experiencia.</h1>
+            <p>Descubre por qué la última entrega de Far Cry podría ser la mejor hasta ahora.</p>
+            <a href="{% url 'game-3' %}" class="btn btn-outline-danger btn-lg mt-2">Quiero saber más...</a>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div id="limonsoda" class="pt-4 pb-4 pr-4 pl-4">
+            <h2>Haz Todo o Haz Nada</h2>
+            <a href="https://limonsoda.cl//" style="text-decoration: none;" target="_blank">
+                {% load static %}
+              <img src="{% static 'img/publ-limon.png' %}" style="width: 100%;" alt="Publicidad Limon Soda">
+            </a><br><br>  
+            <p>Haz todo, Haz nada</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Noticia 4-->
+  <section id="bloque-4">
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col-md-4">
+          <div class="info-left">
+            <img src="{% static 'img/cod-z-1.jpg' %}" style="width: 100%;" alt="Noticia Cod Zombies">
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="info-rigth">
+            <h1 class="titulos display-4">Call of Duty: Black Ops Cold War y su Nuevo Trailer.</h1>
+            <p>El modo zombies nos deja con un primer teaser que adelanta una historia y una atmósfera mucho más oscura y cercana al terror...</p>
+            <a href="{% url 'game-4' %}" class="btn btn-outline-danger btn-lg mt-2">Quiero saber más...</a>
+            <br><br>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div id="discord" class="pt-4 pb-4 pr-4 pl-4">
+            <h2 class="h3 mb-4">Únete al Discord!</h2>
+            <a href="https://discord.gg/QaM9vqW" target="_blank">
+                {% load static %}
+              <img src="{% static 'img/pub-hackerman.jpg' %}" class="mb-3" style="width: 100%;" alt="Publicidad Discord">
+            </a>
+            <p>We are H  A  K  E  R  M  A  N  'S</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Secciones Inferiores-->
+  <section id="secciones">
+    <div class="container">
+      <div class="row my-5">
+        <div class="col-md-6">
+          <h2 class="mt-3"><a href="{% url 'contacto_create' %}">Se Parte del Equipo</a></h2>
+          <p class="h5 mb-4">¡Ven y se parte de nuestro equipo, podrás aprender cosas nuevas, ganar toneladas de XP, logros desbloqueables y mucho, mucho conocimiento!.</p>
+        </div>
+        <div class="col-md-6">
+          <h2 class="mt-3"><a href="{% url 'consolas' %}">Consolas</a></h2>
+          <p class="h5 mb-4">¿Eres fan de las consolas como Play Station y Xbox?, pues no esperes mas
+            descubre todo acerca de la PS5 y la XBox Series X e incluso la Nintendo Switch,
+            mantente siempre al día en nuestra página.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Configuración ScrollReval-->
+  <script>
+    const sr = ScrollReveal();
+
+    sr.reveal('#bloque-1', {
+        duration: 2000,
+        origin: 'bottom'
+    });
+
+    sr.reveal('#bloque-2', {
+        duration: 2000,
+        origin: 'bottom'
+    });
+
+    sr.reveal('#bloque-3', {
+        duration: 2000,
+        origin: 'bottom'
+    });
+
+    sr.reveal('#bloque-4', {
+        duration: 2000,
+        origin: 'bottom'
+    });
+  </script>
+  {% endblock %}

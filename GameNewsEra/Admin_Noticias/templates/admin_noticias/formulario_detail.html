@@ -1,0 +1,54 @@
+{% extends "base_generic.html" %}
+{% block content %}
+    <!--Portada Principal-->
+    <section class="gracias container-fluid slider d-flex">
+      {% load static %}
+      <style>.gracias {background-image: url('{% static "img/contacto.jpg" %}');}</style>
+      <h1 class="display-4 d-block w-100"></h1>
+    </section>
+    <!--Header-->
+    <header id="home">
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="header-content-rigth">
+              <br><br>
+              <h1 id="new" class="display-1 text-center">¡ G  R  A  C  I  A  S !</h1>
+              <p class="mt-5 h2" style="text-align: center;">Nos contactaremos en breve con usted! :D</p>
+              <br><br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="row justify-content-center">
+          <div class="col-md-7">
+            <div id="new">
+              <p class="h3" style="margin-bottom: 3%;">Nombre postulante: {{formulario.nombre}} {{formulario.apellido}}</p>
+              <p class="h3" style="margin-bottom: 3%;">Nivel de Estudios: {{formulario.nivel_estudios}}</p>
+              <p class="h3" style="margin-bottom: 3%;">Correo: {{formulario.correo}}</p>
+              <p class="h3" style="margin-bottom: 3%;">Numero Telefonico: {{formulario.numero}}</p>
+              <p class="h3" style="margin-bottom: 3%;">Area a Postular: {{formulario.area_postular}}</p>
+          </div>      
+        </div>
+      </div>
+    </div>
+    <!--Secciones Inferiores-->
+    <section id="secciones">
+      <div class="container">
+        <div class="row my-5">
+          <div class="col-md-6">
+            <h2 class="mt-3"><a href="{% url 'contacto_create' %}">Se Parte del Equipo</a></h2>
+            <p class="h5 mb-4">¡Ven y se parte de nuestro equipo, podrás aprender cosas nuevas, ganar toneladas de XP, logros desbloqueables y mucho, mucho conocimiento!.</p>
+          </div>
+          <div class="col-md-6">
+            <h2 class="mt-3"><a href="{% url 'consolas' %}">Consolas</a></h2>
+            <p class="h5 mb-4">¿Eres fan de las consolas como Play Station y Xbox?, pues no esperes mas
+              descubre todo acerca de la PS5 y la XBox Series X e incluso la Nintendo Switch,
+              mantente siempre al día en nuestra página.</p>
+          </div>
+        </div>
+      </div>
+    </section>    
+{% endblock %}

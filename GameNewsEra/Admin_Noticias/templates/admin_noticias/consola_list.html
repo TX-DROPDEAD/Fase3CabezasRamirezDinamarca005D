@@ -1,0 +1,49 @@
+{% extends "base_generic.html" %}
+{% block content %}
+{% if user.is_authenticated  %}{% if user.is_staff %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h1 class="display-2" style="margin-top: 18%; margin-bottom: 10%;">Lista de Consolas: </h1>
+            <form action="" method="POST">
+                {% csrf_token %}
+                <div class="card-body">
+                    <div class="form-group">
+                        {% if consola_list %}
+                        <ul style="margin-bottom: 20%;">
+                            {% for consola in consola_list %}
+                            <li class="h3">
+                                <a href="{{ consola.get_absolute_url }}" class="titulorojo">{{consola.nombre}}: </a>{{consola.generacion}}<hr>
+                                <style>.titulorojo:hover {color: #911111; text-decoration: none;}</style>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                        {% else %}
+                        <h2 class="display-2" style="margin-bottom: 14%;">Lo sentimos, no existen consolas disponibles.</h2>
+                        {% endif %}
+                    </div>
+                </div>
+            </form>      
+        </div>
+    </div>
+</div>
+{% endif %}
+{% else %}
+<div class="container">
+  <div class="row justify-content-center">
+      <div class="col-md-8">
+          <form action="" method="POST">
+              {% csrf_token %}
+              <div class="card-body">
+                  <div class="form-group">
+                      <label class="display-4" style="margin-top: 18%; margin-bottom: 10%;" for="formGroupExampleInput">¡¡¡ERROR; DEBE SER UN USUARIO STAFF!!!</label>
+                      <p class="h1"><em>401</em></p>
+                      <p class="h3" style="margin-bottom: 10%;"><em>Unauthorized :(</em></p>
+                  </div>
+              </div>
+          </form>      
+      </div>
+  </div>
+</div>
+{% endif %}
+{% endblock %}

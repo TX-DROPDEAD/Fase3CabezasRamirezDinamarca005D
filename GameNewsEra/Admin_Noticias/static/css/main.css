@@ -1,0 +1,103 @@
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    background: #000000;
+    color: #ffffff;
+}
+
+header {
+    margin-top: 80px;
+}
+
+img {
+    border-radius: 8px;
+}
+
+label {
+    color: brown;
+}
+
+table {
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+a {
+    color: #ffffff;
+}
+
+a:hover {
+    color: black;
+}
+
+nav.navbar {
+    background-color: brown;
+}
+
+#carouselExampleCaptions {
+    margin-top: 72px;
+}
+
+#secciones {
+    background: brown;
+    color: #ffffff;
+    text-shadow: 2px 2px #000000;
+}
+
+#new {
+    color: brown;
+}
+
+.d-block {
+    border-radius: 0px;
+}
+
+.titulos {
+    color: brown;
+}
+
+.slider {
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.ps5 {
+    color: black;
+    text-shadow: 1px 1px #ffffff;
+}
+
+.table {
+    color: white;
+}
+
+.contacto {
+    margin-top: 55px;
+}
+
+.gracias {
+    margin-top: 55px;
+}
+
+.bloque {
+    overflow: scroll;
+    resize: none;
+}
+
+.img-centrar {
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img-centrar-2 {
+    width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }

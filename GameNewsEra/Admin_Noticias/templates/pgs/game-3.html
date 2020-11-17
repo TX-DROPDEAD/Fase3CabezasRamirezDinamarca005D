@@ -1,0 +1,129 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+ <!--Portada Principal-->
+ <section id="img-top" class="fc6 container-fluid slider d-flex">
+    <h1 class="display-4 d-block w-100"></h1>
+    {% load static %}
+    <style>.fc6 {background-image: url('{% static "/img/f6-2.jpg" %}');}</style>
+  </section>
+  <!--Header-->
+  <header id="home">
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="header-content-rigth">
+            <h1 id="new" class="display-2">FARCRY 6 promete una Increíble Experiencia.</h1>
+            <p id="sub" class="mt-5 h3">Ubisoft confirma que Far Cry 6 llegará a 4K en PS5 y XBOX SERIES X</p>
+            <br><br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!--Noticia Bloque 1-->
+  <section id="bloque-1">
+    <div class="container">
+      <div class="row mt-4">
+        <div class="col-md-9">
+          <div class="info-rigth">
+            <p class="h5"> Tras el anuncio del nuevo Far Cry 6, que ya hemos podido ver en primera persona, 
+              se causó cierto revuelo alrededor de un mensaje que formaba parte de la campaña de marketing del videjuego.
+               Según esta, Far Cry 6 llegaría a 4K Ultra HD “solo en Xbox One X y Xbox Series X”, quedándose en HDR en Xbox One S, 
+               lo que dejaba fuera a las consolas de Sony, algo que dio pie a pensar que ni PS4 Pro, y ni siquiera la próxima consola 
+               de la compañía nipona, PS5, llegarían a tal resolución. Afortunadamente sí será de tal manera. 
+              </p>
+            <br><br>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div id="netflix" class="pt-4 pb-4 pr-4 pl-4">
+            <h2>SUSCRIBETE</h2>
+            <a href="https://www.netflix.com/signup?locale=es-ES">
+                {% load static %}
+              <img src="{% static '/img/publ-netfl.png' %}" style="width: 100%;" alt="Publicidad Netflix">
+            </a>
+            <p class="mt-3">See What's Next</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Video-->
+  <section id="video">
+      <div class="container">
+          <div class="row justify-content-center">
+              <div class="col-md-12 align-self-center text-center">
+                <br><br>
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/rgPZ1PG8bD4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <br><br>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!--Seccion Imagen Central-->
+  <section id="img-central">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-12 mt-4">
+                {% load static %}
+                  <img src="{% static '/img/f6-3.jpg' %}" style="width: 100%;" alt="FarCry 6">
+              </div>
+          </div>
+      </div>
+  </section>
+  <!--Reseña-->
+  <section id="reseña">
+    <div class="container">
+      <br><br>
+      <p class="mb-2 h2">
+        Far Cry 6 ya tiene fecha concreta de lanzamiento, y será el próximo 18 de febrero de 2021 tanto en la generación actual, PS4 y Xbox One, como en la futura, PS5 y Xbox Series X, además de en Google Stadia y PC.
+      </p>
+      <p class="h4"> -Ubisoft</p>
+      <br><br>
+    </div>
+  </section>
+  <!--Noticia Bloque 2-->
+  <section id="bloque-2">
+    <div class="container">
+      <div class="row mt-4">
+        <div class="col-md-9">
+          <div class="info-rigth">
+            <p class="h5">La colaboración cercana entre Microsoft y Ubisoft para la publicidad de Far Cry 6 era ya patente, pero dichos rumores se acrecentaron cuando la editora gala borró un tweet en respuesta a un fan preguntando acerca de este asunto, y en el que reiteraba dicha resolución solo para las consolas más potentes de la familia Xbox. Sin embargo, desde Ubisoft se ha rectificado esa información.
+              “Para dejarlo claro, Far Cry 6 estará disponible en 4K en PS5, PS4 Pro y también PC”, han asegurado desde Ubisoft. “Compartiremos más detalles más adelante”, tranquilizando no solo a los poseedores de ambas consolas, sino también a los de un ordenador.</p>
+            <br><br>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div id="corner" class="pt-4 pb-4 pr-4 pl-4">
+            <h2>! P i d e  Y a !</h2>
+            <a href="https://www.netflix.com/signup?locale=es-ES">
+                {% load static %}
+              <img src="{% static '/img/publ-corner.jpg' %}" style="width: 100%;" alt="Publicidad Corner Shop">
+            </a> 
+            <p class="mt-3">Tus pedidos del super en menos de una hora.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Secciones Inferiores-->
+  <section id="secciones">
+    <div class="container">
+      <div class="row my-5">
+        <div class="col-md-6">
+          <h2 class="mt-3"><a href="{% url 'videogames' %}">VideoJuegos</a></h2>
+          <p class="h5 mb-4">Mantente siempre al día con todas las noticias relacionadas con los juegos que correran en las nuevas consolas de proxima generación, ¿Te las vas a perder?.</p>
+        </div>
+        <div class="col-md-6">
+          <h2 class="mt-3"><a href="{% url 'consolas' %}">Consolas</a></h2>
+          <p class="h5 mb-4">¿Eres fan de las consolas como Play Station y Xbox?, pues no esperes mas
+            descubre todo acerca de la PS5 y la XBox Series X e incluso la Nintendo Switch,
+            mantente siempre al día en nuestra página.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endblock %}

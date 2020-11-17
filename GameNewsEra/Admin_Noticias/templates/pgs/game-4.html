@@ -1,0 +1,124 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<!--Portada Principal-->
+<section id="img-top" class="codz container-fluid slider d-flex">
+    <h1 class="display-4 d-block w-100"></h1>
+    {% load static %}
+    <style>.codz {background-image: url('{% static "/img/cod-z-4.jpg" %}');}</style>
+  </section>
+  <!--Header-->
+  <header id="home">
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="header-content-rigth">
+            <h1 id="new" class="display-2">El primer tráiler del modo zombies de CoD Cold War está aquí.</h1>
+            <p id="sub" class="mt-5 h3">El modo zombies de Call of Duty Cold War es lo último que queda por desvelarse del nuevo juego de la saga. Por ahora, ya tenemos un pequeño tráiler oficial del que podemos sacar muchas conclusiones.</p>
+            <br><br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!--Noticia Bloque 1-->
+  <section id="bloque-1">
+    <div class="container mt-5">
+      <div class="row mt-4">
+        <div class="col-md-9">
+          <div class="info-rigth">
+            <p class="h5">El hype con la presentación del nuevo Call of Duty fue bastante alto. Este juego ha llamado la atención de propios y extraños debido a lo bien que funcionó Modern Warfare. Además, el nuevo título tiene relación directa con Blacks Ops, para mucho la mejor subsaga de la franquicia.<br><br>
+              Por este motivo, había muchas ganas de ver que es lo que presentaban. Es cierto que con Call of Duty hay que tener cierto cuidado ya que los cambios de la alpha al juego final suelen ser bastante amplios, por lo que dar un veredicto sobre si el juego es bueno o malo sin haber probado la beta puede ser algo precipitado.<br><br>
+              Sin embargo, uno de los puntos en los que hay especial interés este año es en el tema de los zombies. Dejarlos descansar fue una auténtico acierto para conseguir que los jugadores volvieran a coger esta modalidad con mucha más ganas.</p>
+            <br><br>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div id="radeon" class="pt-4 pb-4 pr-4 pl-4">
+            <h2 class="h3 mb-4">Potencia Tu Experiencia con AMD</h2>
+            <a href="https://www.amd.com/es/graphics/radeon-rx-graphics" target="_blank">
+                {% load static %}
+              <img src="{%static '/img/publ-radeon.png'%}" class ="mb-3" style="width: 100%;" alt="Publicidad Radeon">
+            </a>
+            <p class="mt-3">Mejora tu Rendimiento al momento de Jugar.</p>
+          </div>
+      </div>
+    </div>
+  </section>
+  <!--Seccion Imagen Central-->
+  <section id="img-central">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-12 mt-4">
+                {% load static %}
+                  <img src="{% static '/img/cod-z-1.jpg' %}" style="width: 100%;" alt="CoD Zombies">
+              </div>
+          </div>
+      </div>
+  </section>
+  <!--Reseña-->
+  <section id="reseña">
+    <div class="container">
+      <br><br>
+      <p class="mb-2 h2">
+        Lo primero de todo es que va a volver Nacht der Untoten, el mapa más mítico de la saga de Call of Duty, peor lo hará completamente renovada y seguramente con nuevas zonas y lugares para explorar, así como nuevos enemigos. 
+      </p>
+      <p class="h4"> -Ravent Software (Casa Desarrolladora).</p>
+    </div>
+  </section>
+  <!--Video-->
+  <section id="video">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-12 align-self-center text-center">
+          <br><br>
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/4a8BL36Fua8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <br><br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Noticia Bloque 2-->
+  <section id="bloque-2">
+    <div class="container mt-5">
+      <div class="row mt-4">
+        <div class="col-md-9">
+          <div class="info-rigth">
+            <p class="h5">Precisamente en la presentación de este último conseguimos ver el primer tráiler oficial de los zombies de Call of Duty Black Ops Cold War y ya podemos sacar las primeras conclusiones.<br><br>
+              Lo primero de todo es que va a volver Nacht der Untoten, el mapa más mítico de la saga de Call of Duty, peor lo hará completamente renovada y seguramente con nuevas zonas y lugares para explorar, así como nuevos enemigos.<br><br>
+              También hemos podido ver que las armas volverán a ser las míticas de este modo de juego con el objetivo de trasladarnos al pasado. Además, sumándole el rumor de un más que posible remake de Tranzit, podemos estar ante uno de los mejores modos de la historia.</p>
+            <br><br>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div id="durex" class="pt-4 pb-4 pr-4 pl-4">
+            <h2 class="h3 mb-4">Protégete de las ETS</h2>
+            <a href="https://www.durex.cl/" target="_blank">
+                {% load static %}
+              <img src="{% static '/img/publ-durex.jpg' %}" class="mb-3"style="width: 100%;" alt="Publicidad Durex">
+            </a>
+            <p class="mt-3">Que la Protección te acompañe Siempre.</p>
+          </div>
+      </div>
+    </div>
+  </section>
+  <!--Secciones Inferiores-->
+  <section id="secciones">
+    <div class="container">
+      <div class="row my-5">
+        <div class="col-md-6">
+          <h2 class="mt-3"><a href="{% url 'videogames' %}">VideoJuegos</a></h2>
+          <p class="h5 mb-4">Mantente siempre al día con todas las noticias relacionadas con los juegos que correran en las nuevas consolas de proxima generación, ¿Te las vas a perder?.</p>
+        </div>
+        <div class="col-md-6">
+          <h2 class="mt-3"><a href="{% url 'consolas' %}">Consolas</a></h2>
+          <p class="h5 mb-4">¿Eres fan de las consolas como Play Station y Xbox?, pues no esperes mas
+            descubre todo acerca de la PS5 y la XBox Series X e incluso la Nintendo Switch,
+            mantente siempre al día en nuestra página.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endblock %}
