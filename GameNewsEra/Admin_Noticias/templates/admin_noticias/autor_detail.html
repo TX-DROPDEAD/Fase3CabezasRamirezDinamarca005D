@@ -1,6 +1,7 @@
 {% extends "base_generic.html" %}
 {% block content %}
 {% if user.is_authenticated  %}{% if user.is_staff %}
+<style> .links {display: inline-block;}</style>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -11,8 +12,10 @@
                     <div class="form-group">
                         <label class="h3" style="margin-top: 8%;" for="formGroupExampleInput">Nombre del Autor: </label><p class="h3">{{autor.nom_autor}}</p>
                         <label class="h3" style="margin-top: 5%;" for="formGroupExampleInput">Nivel de Estudios del Autor: </label><p class="h3">{{autor.educacion}}</p>
-                        <label class="h3" style="margin-top: 5%;"for="formGroupExampleInput">Número del Autor: </label><p class="h3">{{autor.numero}}</p>
-                        <label class="h3" style="margin-top: 5%;"style="margin-bottom: 10%;" for="formGroupExampleInput">Correo del Autor: </label><p class="h3" style="margin-bottom: 12%;">{{autor.correo}}</p>
+                        <label class="h3" style="margin-top: 5%;" for="formGroupExampleInput">Número del Autor: </label><p class="h3">{{autor.numero}}</p>
+                        <label class="h3" style="margin-top: 5%;" for="formGroupExampleInput">Correo del Autor: </label><p class="h3" style="margin-bottom: 5%;">{{autor.correo}}</p>
+                        <a class="links h3 btn btn-danger btn-lg mr-3" href="{% url 'autor_delete' pk=autor.id_autor %}">Eliminar</a>
+                        <a class="links h3 btn btn-danger btn-lg" href="{% url 'autor_update' pk=autor.id_autor %}">Actualizar</a>
                     </div>
                 </div>
             </form>      

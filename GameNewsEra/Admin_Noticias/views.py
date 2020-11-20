@@ -61,7 +61,7 @@ class AutorCreate(CreateView):
 class AutorUpdate(UpdateView):
 
     model = Autor
-    fields = ['id_autor','nom_autor','educacion','numero','correo']
+    fields = ['nom_autor','educacion','numero','correo']
 
 class AutorDelete(DeleteView):
     
@@ -114,7 +114,7 @@ class ConsolaCreate(CreateView):
 
 class ConsolaUpdate(UpdateView):
     model = Consola
-    fields = ['id_consola','nombre','generacion']
+    fields = ['nombre','generacion']
 
 class ConsolaDelete(DeleteView):
     model = Consola

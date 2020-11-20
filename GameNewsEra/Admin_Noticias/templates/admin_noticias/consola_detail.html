@@ -10,7 +10,9 @@
                 <div class="card-body">
                     <div class="form-group">
                         <label class="h2" style="margin-top: 8%;" for="formGroupExampleInput">Consola: </label><p class="h2">{{consola.nombre}}</p>
-                        <label class="h2" style="margin-top: 5%;" for="formGroupExampleInput">Generacion: </label><p class="h2" style="margin-bottom: 14%">{{consola.generacion}}</p>
+                        <label class="h2" style="margin-top: 5%;" for="formGroupExampleInput">Generacion: </label><p class="h2" style="margin-bottom: 5%">{{consola.generacion}}</p>
+                        <a class="links h3 btn btn-danger btn-lg mr-3" href="{% url 'consola_delete' pk=consola.id_consola %}">Eliminar</a>
+                        <a class="links h3 btn btn-danger btn-lg" href="{% url 'consola_update' pk=consola.id_consola %}">Actualizar</a>
                     </div>
                 </div>
             </form>      

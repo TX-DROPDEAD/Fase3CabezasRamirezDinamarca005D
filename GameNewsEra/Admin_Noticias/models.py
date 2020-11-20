@@ -49,7 +49,7 @@ class Noticia(models.Model):
     descripcion = models.TextField(max_length = 100, help_text='Agrege una pequeña descripción de la noticia')
     tipo_de_noticia = models.CharField(max_length = 50, null = True ,help_text='Debe indicar el tipo de noticia, por ejemplo novedad, popular etc.')
     autor = models.ForeignKey(Autor, on_delete = models.SET_NULL, null= True)
-
+    
     def __str__(self):
 
         return f'{self.titulo}, {self.id_noticia}' 

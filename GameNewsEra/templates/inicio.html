@@ -1,0 +1,124 @@
+{% extends "base_generic.html" %}
+{% block content %}
+<style> .links:hover {color: #911111; text-decoration: none;} </style>
+<!--Header-->
+<header id="home" class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="header-content-rigth">
+                <br><br>
+                <h1 class="h3 display-4 text-center">Bienvenido a Games New Era</h1>
+            </div>
+        </div>
+    </div>
+</header>
+{% if user.is_superuser %}
+<section>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-3">
+                <div class="mt-5 mb-3">
+                    {% load static %}
+                    <img class="border border-primary" src="{% static 'img/user-2.png' %}" style="width: 50%; margin-left: 20%;" alt="Press Start">
+                </div>
+            </div>
+            <div class="col-md-6 ">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <div class="card-body border border-danger text-center mt-5 mb-4">
+                        <div class="form-group">
+                            <h2 class="h3">USUARIO SUPERUSER</h2>
+                            <label class="h3" style="margin-top: 8%;" for="formGroupExampleInput">Muy buen dia señor/a </label><p class="h3">{{user.username}}</p>
+                            <p class="h3" style="margin-top : 10%; color: #911111;">¿Que desea hacer?</p><hr>
+                            <p class="h3" style="margin-bottom: 5%; color: #911111;">Administración de Autores</p>
+                            <a class="links h3" href="{% url 'autor_create' %}">Registrar Autor</a><hr>
+                            <a class="links h3 mb-5" href="{% url 'autor_list' %}">Actualizar Autor</a><hr>
+                            <a class="links h3 mb-5" href="{% url 'autor_list' %}">Borrar Autor</a><hr>
+                            <a class="links h3 mb-5" href="{% url 'autor_list' %}">Visualizar Autores</a><hr>
+                            <p class="h3" style="margin-bottom: 5%; color: #911111;">Administración de Consolas</p>
+                            <a class="links h3" href="{% url 'consola_create' %}">Registrar Consola</a><hr>
+                            <a class="links h3" href="{% url 'consola_list' %}">Actualizar Consola</a><hr>
+                            <a class="links h3" href="{% url 'consola_list' %}">Borrar Consola</a><hr>
+                            <a class="links h3" href="{% url 'consola_list' %}">Visualizar Consola</a><hr>
+                        </div>
+                    </div>
+                </form>      
+            </div>
+            <div class="col-md-3">
+                <div class="mt-5 mb-3">
+                    {% load static %}
+                    <img class="border border-primary" src="{% static 'img/user-2.png' %}" style="width: 50%; margin-left: 20%;" alt="Press Start">
+                </div>
+            </div>
+            <a class="links h1" style="margin-bottom: 5%; margin-top: 5%; text-align: center;" href="{% url 'logout' %}">Cerrar Sesion</a>
+        </div>
+    </div>
+</section>
+{% elif user.is_staff %}
+<section>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-3">
+                <div class="mt-5 mb-3">
+                    {% load static %}
+                    <img class="border border-primary" src="{% static 'img/user-2.png' %}" style="width: 50%; margin-left: 20%;" alt="Press Start">
+                </div>
+            </div>
+            <div class="col-md-6 ">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <div class="card-body border border-danger text-center mt-5 mb-4">
+                        <div class="form-group">
+                            <h2 class="h3">USUARIO STAFF</h2>
+                            <label class="h3" style="margin-top: 8%;" for="formGroupExampleInput">Muy buen dia señor/a </label><p class="h3">{{user.username}}</p>
+                            <p class="h5" style="margin-top : 10%; margin-bottom: 10%;">Que desea ver?</p>
+                            <a class="links h1" style="margin-bottom: 20%;" href="{% url 'logout' %}">Cerrar Sesion</a>
+                        </div>
+                    </div>
+                </form>      
+            </div>
+            <div class="col-md-3">
+                <div class="mt-5 mb-3">
+                    {% load static %}
+                    <img class="border border-primary" src="{% static 'img/user-2.png' %}" style="width: 50%; margin-left: 20%;" alt="Press Start">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% else %}
+<section>
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="mt-5">
+                    {% load static %}
+                    <img src="{% static 'img/user-1.png' %}" style="width: 50%;" alt="Press Start">
+                </div>
+            </div>
+            <div class="col-md-6 border border-danger justify-content-center mt-5 mb-5">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label class="display-4" style="margin-top: 10%; margin-bottom: 10%;" for="formGroupExampleInput">Usted no tiene una sesion iniciada</label>
+                            <p class="h2" style="margin-bottom: 10%;"><em>Porfavor inicie sesion o registrese</em></p>
+                        </div>
+                        <div class="card-body text-center">
+                            <a class="links h2" style="margin-bottom: 10%;" href="{% url 'login' %}">Iniciar Sesion</a><br>
+                            <a class="links h2" style="margin-bottom: 5%;" href="{% url 'registro' %}">Registrarse</a>
+                        </div>
+                    </div>
+                </form>      
+            </div>
+            <div class="col-md-3">
+                <div class="mt-5">
+                    {% load static %}
+                    <img src="{% static 'img/user-1.png' %}" style="width: 50%;" alt="Press Start">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}
+{% endblock %}
