@@ -44,12 +44,20 @@ class Autor(models.Model):
 
 class Noticia(models.Model):
 
-    id_noticia = models.UUIDField(primary_key = True, default = uuid.uuid4, help_text = 'Indique el ID de la Noticia')
-    titulo = models.CharField(max_length = 50, help_text='Indique el titular de la noticia')
-    descripcion = models.TextField(max_length = 100, help_text='Agrege una pequeña descripción de la noticia')
-    tipo_de_noticia = models.CharField(max_length = 50, null = True ,help_text='Debe indicar el tipo de noticia, por ejemplo novedad, popular etc.')
+    id_noticia = models.UUIDField(primary_key = True, default = uuid.uuid4, help_text = 'Indique el ID de la noticia')
+    portada = models.ImageField(null=True, blank=True, default='default.jpg', help_text='Imagen que se mostrara como portada')
+    titulo = models.CharField(max_length = 900, null=False, default=' ', help_text='Indique el titular de la noticia')
+    subtitulo = models.CharField(max_length=900, null=False, default=' ', help_text='Indique el subtitulo de la noticia')
+    parrafo1 = models.TextField(max_length = 3000, default=' ', null=False, help_text='Primer parrafo de la noticia')
+    imagen = models.ImageField(null=True, blank=True, default='default.jpg', help_text='Imagen central de la noticia')
+    bajadaimagen = models.CharField(max_length=900, null=True, help_text='Descripcion de la imagen')
+    video = models.CharField(max_length=200, null=True, blank=True, help_text='Link del video que se quiera mostrar (Debe ser en formato EMBED)')
+    parrafo2 = models.TextField(max_length = 3000, null=True, help_text='Segundo parrafo de la noticia opcional')
     autor = models.ForeignKey(Autor, on_delete = models.SET_NULL, null= True)
     
+    class Meta:
+        ordering = ['id_noticia']
+
     def __str__(self):
 
         return f'{self.titulo}, {self.id_noticia}' 

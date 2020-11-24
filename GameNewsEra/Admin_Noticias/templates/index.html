@@ -49,15 +49,20 @@
           <div class="col-md-6">
             <div class="header-content-left">
               {% load static %}
-              <img class="mt-5" src="{% static 'img/home-cod.jpg' %}" style="width: 100%;" alt="Imagen Noticia Principal">
+              <img class="mt-2" src="{% static 'img/cpk-1.jpg' %}" style="width: 100%;" alt="Imagen Noticia Principal">
             </div>
           </div>
           <div class="col-md-6">
             <div class="header-content-rigth">
               <br><br>
-              <h1 id="new">Call of Duty: Black Ops Cold War Zombies<span class="badge badge-danger ml-3">New</span></h1>
-              <p class="mt-5 mb-5 h5">El modo zombies nos deja con un primer teaser que adelanta una historia y una atmósfera mucho más oscura y cercana al terror...</p>
-              <a href="{% url 'game-4' %}" class="btn btn-outline-danger btn-lg mt-2">Leer Más</a>
+              <h1 id="new">PRÓXIMO LANZAMIENTO: </h1>
+              <p class="mb-2 display-4">
+                Cyberpunk 2 0 7 7  
+              </p>
+              <p class="h1">
+                <span class="mt-2 badge badge-danger">10 de Diciembre 2020</span>
+                <span class="badge badge-dark">PS5/XBOX/PC</span>
+              </p>
               <br><br>
             </div>
           </div>
@@ -102,14 +107,14 @@
           <div class="col-md-4">
             <div class="info-left">
               {% load static %}
-              <img src="{% static 'img/cpk-2.png' %}" style="width: 100%;" alt="Noticia CyberPunk 2077">
+              <img src="{% static 'img/ps57.png' %}" style="width: 100%;" alt="PlayStation 5">
             </div>
           </div>
           <div class="col-md-5 my-auto">
             <div class="info-rigth">
-              <h1 class="titulos display-4">Cyberpunk 2077 está aquí.</h1>
-              <p class="h5 mt-4">El president de CD Projekt habla de las versiones de Cyberpunk 2077 para PS5 y Xbox Series X, así como de sus expansiones y su modo multijugador.</p>
-              <a href="{% url 'game-1' %}" class="btn btn-outline-danger btn-lg mt-2">Quiero saber más...</a>
+              <h1 class="titulos display-4">PS5: Un cerebro muy potente.</h1>
+              <p class="h5 mt-4">Poderosos 8 núcleos Zen de Segunda Generación, Tempest 3D audio, Ray Traycing y mucho más....</p>
+              <a href="{% url 'consolas' %}" class="btn btn-outline-danger btn-lg mt-2">Quiero saber más...</a>
             </div>
           </div>
           <div class="col-md-3 my-auto">
@@ -126,42 +131,12 @@
         </div>
       </div>
     </section>
-    <!--Bloque 3-->
-    <section id="bloque-3">
-      <div class="container">
-        <div class="row mt-5">
-          <div class="col-md-4">
-            <div class="info-left">
-              {% load static %}
-              <img src="{% static 'img/ps57.png' %}" style="width: 100%;" alt="PlayStation 5">
-            </div>
-          </div>
-          <div class="col-md-5 my-auto">
-            <div class="info-rigth">
-              <h1 class="titulos display-4">PS5: Un cerebro muy potente.</h1>
-              <p class="h5 mt-4">Poderosos 8 núcleos Zen de Segunda Generación, Tempest 3D audio, Ray Traycing y mucho más....</p>
-              <a href="{% url 'consolas' %}" class="btn btn-outline-danger btn-lg mt-2">Quiero saber más...</a>
-            </div>
-          </div>
-          <div class="col-md-3 my-auto">
-            <div id="fornite" class="pt-4 pb-4 pr-4 pl-4">
-              <h2>Juega Ya!</h2>
-              <a href="https://www.epicgames.com/fortnite/es-MX/home" target="_blank">
-                {% load static %}
-                <img src="{% static 'img/pub-fornite.jpg' %}" style="width: 100%;" alt="4ta Temporada Fornite">
-              </a>
-              <p class="mt-3">Juega como tus Vengadores favoritos en esta nueva aventura!.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
     <!--Secciones Inferiores-->
     <section id="secciones">
       <div class="container">
         <div class="row my-5">
           <div class="col-md-6">
-            <h2 class="mt-3"><a href="{% url 'videogames' %}">VideoJuegos</a></h2>
+            <h2 class="mt-3"><a href="{% url 'noticia_list' %}">VideoJuegos</a></h2>
             <p class="h5 mb-4">Mantente siempre al día con todas las noticias relacionadas con los juegos que correran en las nuevas consolas de proxima generación, ¿Te las vas a perder?.</p>
           </div>
           <div class="col-md-6">

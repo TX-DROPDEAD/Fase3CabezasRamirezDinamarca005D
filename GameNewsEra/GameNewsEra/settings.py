@@ -123,10 +123,15 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+X_FRAME_OPTIONS = 'ALLOW-FROM https://youtube.com/'
+
 LOGIN_REDIRECT_URL = 'inicio'
 LOGOUT_REDIRECT_URL = 'inicio'
 
 EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
 EMAIL_FILE_PATH = os.path.join(BASE_DIR, "Correos_enviados")
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'mediaupdates')
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'

@@ -5,8 +5,13 @@ from django.urls import reverse_lazy
 from django.http import HttpResponse
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views import generic
-from . forms import FormularioForm
+from . forms import FormularioForm, NoticiaForm
+from django.views.decorators.clickjacking import xframe_options_exempt
 # Create your views here.
+
+@xframe_options_exempt
+def ok_to_load_in_a_frame(request):
+    return HttpResponse("This page is safe to load in a frame on any site.")
 
 def index(request):
 
@@ -32,25 +37,6 @@ def gracias(request):
 
     return render(request, 'gracias.html', context={},)
 
-
-def game1(request):
-
-    return render(request,'pgs/game-1.html', context={},)
-
-
-def game2(request):
-
-    return render(request,'pgs/game-2.html', context={},)
-
-
-def game3(request):
-
-    return render(request,'pgs/game-3.html', context={},)
-
-
-def game4(request):
-
-    return render(request,'pgs/game-4.html', context={},)
 
 # CRUD Autor
 class AutorCreate(CreateView):
@@ -87,7 +73,7 @@ class NoticiaCreate(CreateView):
 class NoticiaUpdate(UpdateView):
 
     model = Noticia
-    fields = ['id_noticia','titulo','descripcion','tipo_de_noticia','autor']
+    fields = ['id_noticia','portada','titulo','subtitulo','parrafo1','imagen','bajadaimagen','video','parrafo2','autor']
 
 class NoticiaDelete(DeleteView):
 
@@ -148,4 +134,21 @@ def formulario_nuevo(request):
         form = FormularioForm()
         return render(request, 'admin_noticias/contacto_form.html', 
         {'form': form, 'nro_autores':nro_autores, 'nro_noticias':nro_noticias, 'nro_consolas':nro_consolas})
+
+
+def noticia_nueva(request, id):
+    noticia = Noticia.objects.get(id_noticia=id)
+    data = {
+        'form':NoticiaForm(instance=noticia)
+    }
+
+    if request.method == "POST":
+        form = NoticiaForm(request.POST, files=request.FILES)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.save()
+            form.save_m2m()
+        data['form'] = NoticiaForm(instance=Noticia.objects.get(id_noticia=id))
+
+    return render(request, 'admin_noticias/noticia_list', context={})
 

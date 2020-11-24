@@ -7,11 +7,6 @@ urlpatterns = [
     path('videogames/', views.videogames, name='videogames'),
     path('consolas/', views.consolas, name='consolas'),
     path('gracias/', views.gracias, name='gracias'),
-    #Path paginas de noticias
-    path('videogames/game-1', views.game1, name='game-1'),
-    path('videogames/game-2', views.game2, name='game-2'),
-    path('videogames/game-3', views.game3, name='game-3'),
-    path('videogames/game-4', views.game4, name='game-4'),
 ]
 
 urlpatterns += [

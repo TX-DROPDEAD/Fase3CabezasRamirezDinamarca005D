@@ -1,33 +1,27 @@
 {% extends "base_generic.html" %}
 {% block content %}
 <style> .links:hover {color: #911111; text-decoration: none;} </style>
+{% if user.is_superuser %}
 <!--Header-->
 <header id="home" class="container">
     <div class="row">
         <div class="col-md-12">
             <div class="header-content-rigth">
                 <br><br>
-                <h1 class="h3 display-4 text-center">Bienvenido a Games New Era</h1>
+                <h1 class="h3 display-4 text-center">Panel de Administrador</h1>
+                <h1 class="h3 titulos display-4 text-center">G A M E S N E W S E R A </h1>
             </div>
         </div>
     </div>
 </header>
-{% if user.is_superuser %}
 <section>
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-3">
-                <div class="mt-5 mb-3">
-                    {% load static %}
-                    <img class="border border-primary" src="{% static 'img/user-2.png' %}" style="width: 50%; margin-left: 20%;" alt="Press Start">
-                </div>
-            </div>
-            <div class="col-md-6 ">
+            <div class="col-md-6">
                 <form action="" method="POST">
                     {% csrf_token %}
                     <div class="card-body border border-danger text-center mt-5 mb-4">
                         <div class="form-group">
-                            <h2 class="h3">USUARIO SUPERUSER</h2>
                             <label class="h3" style="margin-top: 8%;" for="formGroupExampleInput">Muy buen dia señor/a </label><p class="h3">{{user.username}}</p>
                             <p class="h3" style="margin-top : 10%; color: #911111;">¿Que desea hacer?</p><hr>
                             <p class="h3" style="margin-bottom: 5%; color: #911111;">Administración de Autores</p>
@@ -44,10 +38,10 @@
                     </div>
                 </form>      
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="mt-5 mb-3">
                     {% load static %}
-                    <img class="border border-primary" src="{% static 'img/user-2.png' %}" style="width: 50%; margin-left: 20%;" alt="Press Start">
+                    <img class="" src="{% static 'img/session.png' %}" style="width: 100%; margin-left: 10%;" alt="Press Start">
                 </div>
             </div>
             <a class="links h1" style="margin-bottom: 5%; margin-top: 5%; text-align: center;" href="{% url 'logout' %}">Cerrar Sesion</a>
@@ -55,34 +49,44 @@
     </div>
 </section>
 {% elif user.is_staff %}
+<!--Header-->
+<header id="home" class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="header-content-rigth">
+                <br><br>
+                <h1 class="h3 display-4 text-center">Panel de Staff</h1>
+                <h1 class="h3 titulos display-4 text-center">G A M E S N E W S E R A </h1>
+            </div>
+        </div>
+    </div>
+</header>
 <section>
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-3">
-                <div class="mt-5 mb-3">
-                    {% load static %}
-                    <img class="border border-primary" src="{% static 'img/user-2.png' %}" style="width: 50%; margin-left: 20%;" alt="Press Start">
-                </div>
-            </div>
-            <div class="col-md-6 ">
+            <div class="col-md-6">
                 <form action="" method="POST">
                     {% csrf_token %}
                     <div class="card-body border border-danger text-center mt-5 mb-4">
                         <div class="form-group">
-                            <h2 class="h3">USUARIO STAFF</h2>
                             <label class="h3" style="margin-top: 8%;" for="formGroupExampleInput">Muy buen dia señor/a </label><p class="h3">{{user.username}}</p>
-                            <p class="h5" style="margin-top : 10%; margin-bottom: 10%;">Que desea ver?</p>
-                            <a class="links h1" style="margin-bottom: 20%;" href="{% url 'logout' %}">Cerrar Sesion</a>
+                            <p class="h3" style="margin-top : 10%; color: #911111;">¿Que desea hacer?</p><hr>
+                            <p class="h3" style="margin-bottom: 5%; color: #911111;">Administración de Noticias</p>
+                            <a class="links h3" href="{% url 'noticia_create' %}">Crear Noticia</a><hr>
+                            <a class="links h3 mb-5" href="{% url 'noticia_list' %}">Actualizar Noticia</a><hr>
+                            <a class="links h3 mb-5" href="{% url 'noticia_list' %}">Borrar Noticia</a><hr>
+                            <a class="links h3 mb-5" href="{% url 'noticia_list' %}">Visualizar Noticias</a><hr>
                         </div>
                     </div>
                 </form>      
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="mt-5 mb-3">
                     {% load static %}
-                    <img class="border border-primary" src="{% static 'img/user-2.png' %}" style="width: 50%; margin-left: 20%;" alt="Press Start">
+                    <img class="" src="{% static 'img/session.png' %}" style="width: 100%; margin-left: 10%;" alt="Press Start">
                 </div>
             </div>
+            <a class="links h1" style="margin-bottom: 5%; margin-top: 5%; text-align: center;" href="{% url 'logout' %}">Cerrar Sesion</a>
         </div>
     </div>
 </section>
@@ -90,13 +94,13 @@
 <section>
     <div class="container text-center">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="mt-5">
                     {% load static %}
                     <img src="{% static 'img/user-1.png' %}" style="width: 50%;" alt="Press Start">
                 </div>
             </div>
-            <div class="col-md-6 border border-danger justify-content-center mt-5 mb-5">
+            <div class="col-md-7 justify-content-center mb-5">
                 <form action="" method="POST">
                     {% csrf_token %}
                     <div class="card-body">
@@ -105,17 +109,11 @@
                             <p class="h2" style="margin-bottom: 10%;"><em>Porfavor inicie sesion o registrese</em></p>
                         </div>
                         <div class="card-body text-center">
-                            <a class="links h2" style="margin-bottom: 10%;" href="{% url 'login' %}">Iniciar Sesion</a><br>
+                            <a class="links h2" style="margin-bottom: 10%;" href="{% url 'login' %}">Iniciar Sesion</a><hr>
                             <a class="links h2" style="margin-bottom: 5%;" href="{% url 'registro' %}">Registrarse</a>
                         </div>
                     </div>
                 </form>      
-            </div>
-            <div class="col-md-3">
-                <div class="mt-5">
-                    {% load static %}
-                    <img src="{% static 'img/user-1.png' %}" style="width: 50%;" alt="Press Start">
-                </div>
             </div>
         </div>
     </div>

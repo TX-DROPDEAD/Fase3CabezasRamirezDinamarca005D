@@ -1,23 +1,35 @@
 {% extends "base_generic.html" %}
 {% block content %}
-{% if user.is_authenticated  %}{% if user.is_staff %}
+{% if user.is_staff %}
+ <!--Portada Principal-->
+ <section class="games container-fluid slider d-flex">
+    <h1 class="display-4 d-block w-100"></h1>
+    {% load static %}
+    <style>.games {background-image: url('{% static "img/games.jpg" %}');}</style>
+</section>
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <h1 class="display-2" style="margin-top: 18%; margin-bottom: 10%;">Lista de Noticias: </h1>
+    <div class="row">
+        <div class="col-md-12">
+            <h1 id="new" class="display-2 text-center" style="margin-top: 5%; margin-bottom: 5%;">GAMES NEWS</h1>
+            <p class="mt-5 mb-5 h3 text-center">SELECCIONE LA NOTICIA QUE DESEE BORRAR O ACTUALIZAR</p>
             <form action="" method="POST">
                 {% csrf_token %}
                 <div class="card-body">
                     <div class="form-group">
                         {% if noticia_list %}
-                        <ul style="margin-bottom: 20%;">
                             {% for noticia in noticia_list %}
-                            <li class="h3">
-                                <a href="{{ noticia.get_absolute_url }}" class="titulorojo" style="margin-bottom: 10%;">{{noticia.titulo}}: </a>{{noticia.descripcion}}<hr>
-                                <style>.titulorojo:hover {color: #911111; text-decoration: none;}</style>
-                            </li>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-4 mb-5">
+                                        <img src="{{ noticia.portada.url }}" style="width:100%;">
+                                    </div>                           
+                                    <div class="col-md-8 h2">
+                                        <a href="{{ noticia.get_absolute_url }}" class="titulorojo" style="margin-bottom: 10%;">{{noticia.titulo}}: </a><br><p>{{noticia.subtitulo}}</p> 
+                                        <style>.titulorojo:hover {color: #791616; text-decoration: none;} .titulorojo{ color: #ee5353;}</style>
+                                    </div>
+                                </div>
+                            </div>
                             {% endfor %}
-                        </ul>
                         {% else %}
                         <h2 class="display-2" style="margin-bottom: 14%;">Lo sentimos, no existen noticias disponibles.</h2>
                         {% endif %}
@@ -27,23 +39,78 @@
         </div>
     </div>
 </div>
-{% endif %}
-{% else %}
-<div class="container">
-  <div class="row justify-content-center">
-      <div class="col-md-8">
-          <form action="" method="POST">
-              {% csrf_token %}
-              <div class="card-body">
-                  <div class="form-group">
-                      <label class="display-4" style="margin-top: 18%; margin-bottom: 10%;" for="formGroupExampleInput">¡¡¡ERROR; DEBE SER UN USUARIO STAFF!!!</label>
-                      <p class="h1"><em>401</em></p>
-                      <p class="h3" style="margin-bottom: 10%;"><em>Unauthorized :(</em></p>
-                  </div>
-              </div>
-          </form>      
+<!--Secciones Inferiores-->
+<section id="secciones">
+    <div class="container">
+      <div class="row my-5">
+        <div class="col-md-6">
+          <h2 class="mt-3"><a href="{% url 'contacto_create' %}">Se Parte del Equipo</a></h2>
+          <p class="h5 mb-4">¡Ven y se parte de nuestro equipo, podrás aprender cosas nuevas, ganar toneladas de XP, logros desbloqueables y mucho, mucho conocimiento!.</p>
+        </div>
+        <div class="col-md-6">
+          <h2 class="mt-3"><a href="{% url 'consolas' %}">Consolas</a></h2>
+          <p class="h5 mb-4">¿Eres fan de las consolas como Play Station y Xbox?, pues no esperes mas
+            descubre todo acerca de la PS5 y la XBox Series X e incluso la Nintendo Switch,
+            mantente siempre al día en nuestra página.</p>
+        </div>
       </div>
-  </div>
+    </div>
+  </section>
+{% else %}
+ <!--Portada Principal-->
+ <section class="games container-fluid slider d-flex">
+    <h1 class="display-4 d-block w-100"></h1>
+    {% load static %}
+    <style>.games {background-image: url('{% static "img/games.jpg" %}');}</style>
+</section>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 id="new" class="display-2 text-center" style="margin-top: 5%; margin-bottom: 5%;">GAMES NEWS</h1>
+            <p class="mt-5 mb-5 h3">Aqui encontrarás noticias relacionadas a los VideoJuegos que veremos en la próxima generación de Consolas...</p>
+            <form action="" method="POST">
+                {% csrf_token %}
+                <div class="card-body">
+                    <div class="form-group">
+                        {% if noticia_list %}
+                            {% for noticia in noticia_list %}
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-4 mb-5">
+                                        <img src="{{ noticia.portada.url }}" style="width:100%;">
+                                    </div>                           
+                                    <div class="col-md-8 h2">
+                                        <a href="{{ noticia.get_absolute_url }}" class="titulorojo" style="margin-bottom: 10%;">{{noticia.titulo}}: </a><br><p>{{noticia.subtitulo}}</p> 
+                                        <style>.titulorojo:hover {color: #911111; text-decoration: none;} .titulorojo{ color: #ee5353;}</style>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        {% else %}
+                        <h2 class="display-2" style="margin-bottom: 14%;">Lo sentimos, no existen noticias disponibles.</h2>
+                        {% endif %}
+                    </div>
+                </div>
+            </form>      
+        </div>
+    </div>
 </div>
+<!--Secciones Inferiores-->
+<section id="secciones">
+    <div class="container">
+      <div class="row my-5">
+        <div class="col-md-6">
+          <h2 class="mt-3"><a href="{% url 'contacto_create' %}">Se Parte del Equipo</a></h2>
+          <p class="h5 mb-4">¡Ven y se parte de nuestro equipo, podrás aprender cosas nuevas, ganar toneladas de XP, logros desbloqueables y mucho, mucho conocimiento!.</p>
+        </div>
+        <div class="col-md-6">
+          <h2 class="mt-3"><a href="{% url 'consolas' %}">Consolas</a></h2>
+          <p class="h5 mb-4">¿Eres fan de las consolas como Play Station y Xbox?, pues no esperes mas
+            descubre todo acerca de la PS5 y la XBox Series X e incluso la Nintendo Switch,
+            mantente siempre al día en nuestra página.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 {% endif %}
 {% endblock %}
