@@ -38,7 +38,7 @@ router.register(r'Consolas', views.ConsolaViewSet)
 
 urlpatterns += [
     path('router', include(router.urls)),
-    path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+   path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)
