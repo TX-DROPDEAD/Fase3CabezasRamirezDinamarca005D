@@ -46,7 +46,7 @@ class FormularioForm(forms.ModelForm):
     ))
     class Meta:
         model = Formulario
-        fields = ('codigo','area_postular','nombre','apellido','correo','numero','nivel_estudios','motivo')
+        fields = ('area_postular','nombre','apellido','correo','numero','nivel_estudios','motivo')
 
 class NoticiaForm(forms.ModelForm):
     codigo = forms.CharField(label='Codigo de la Noticia', max_length=50, widget=forms.TextInput(

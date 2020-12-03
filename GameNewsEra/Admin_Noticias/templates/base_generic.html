@@ -46,9 +46,6 @@
             <li class="nav-item">
               <a class="nav-link" href="{% url 'inicio' %}"><b>Iniciar Sesion</b></a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'password_reset' %}"><b>Reinicie su contraseña</b></a>
-            </li>
           </ul>
         </div>
       </div>
@@ -58,7 +55,7 @@
     <!--Pie de Pagina-->
     <footer>
       <div class="container">
-        <div class="row">
+        <div class="row" style="margin-top: 10%;">
           <div class="col-md-12">
             {% load static %}
             <img src="{% static 'img/logo-2.png' %}" style="width: 10%;" alt="Logo Página">

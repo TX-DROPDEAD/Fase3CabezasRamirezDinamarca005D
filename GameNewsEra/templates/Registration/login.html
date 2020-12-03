@@ -6,7 +6,7 @@
         <div class="col-md-3 mt-5">
             <div class="mt-5">
                 {% load static %}
-                <img class="border border-danger" src="{% static 'img/user-3.jpg' %}" style="width: 80%; margin-top: 50%;" alt="Press Start">
+                <img class="" src="{% static 'img/logo-2.png' %}" style="width: 80%; margin-top: 50%;" alt="Press Start">
             </div>
         </div>
         <div class="col-md-6">
@@ -21,6 +21,8 @@
                       </table>
                     </div>
                     <button type="submit" style="margin-top: 8%; margin-bottom: 12%;" class="btn btn-outline-danger btn-block">Enviar</button>
+                    <a class="h5 reset" href="{% url 'password_reset' %}"><b>Reinicie su contraseña</b></a>
+                    <style>.reset {color: #ffffff;} .reset:hover {color: #911111; text-decoration: none; text-align: center;}</style>
                 </div>
             </form>      
         </div>

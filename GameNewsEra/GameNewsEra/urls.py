@@ -18,6 +18,8 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from django.views.generic.base import TemplateView
+from rest_framework import routers
+from Api_Usuarios import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,6 +27,18 @@ urlpatterns = [
     path('accounts/', include('Sesion.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
     path('', TemplateView.as_view(template_name='inicio.html'), name='inicio'),
+]
+
+router = routers.DefaultRouter()
+router.register(r'Usuarios', views.UserViewSet)
+router.register(r'Grupos', views.GroupViewSet)
+router.register(r'Autores', views.AutorViewSet)
+router.register(r'Noticias', views.NoticiaViewSet)
+router.register(r'Consolas', views.ConsolaViewSet)
+
+urlpatterns += [
+    path('router', include(router.urls)),
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)

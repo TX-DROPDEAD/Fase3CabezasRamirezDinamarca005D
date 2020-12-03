@@ -41,7 +41,13 @@ INSTALLED_APPS = [
     'Admin_Noticias.apps.AdminNoticiasConfig',
     'crispy_forms',
     'Sesion.apps.SesionConfig',
+    'rest_framework'
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -58,7 +64,7 @@ ROOT_URLCONF = 'GameNewsEra.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['./templates','./pgs'],
+        'DIRS': ['./templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

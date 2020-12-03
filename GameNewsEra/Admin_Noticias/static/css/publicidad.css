@@ -1,0 +1,32 @@
+#monster {
+    color: #00ff00;
+    background: #001a00;
+}
+
+#solotodo {
+    color: #ff8c1a;
+    background: #fff2e6;
+}
+
+
+#bootstrap {
+    color: #ffffff;
+    background: #730099;
+}
+
+#radeon
+{
+    background-color: #612b2b ;
+    color:  #ffffff;
+    border: solid 2px;
+    border-color:#f80404;
+}
+
+
+.amd 
+{
+    background-color: #000000;
+    color:  #ffffff;
+    border: solid 2px;
+    border-color:  #fffb24;
+}
